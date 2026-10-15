@@ -1,0 +1,65 @@
+<!-- mai trebuie sa facem navbarul la fel pt ambele pagini-->
+<!-- harta nu e responsive pe telefon-->
+ 
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZebraHack Challenge 3 - Wood Transport Intelligence</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet">
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+</head>
+<body>
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <a href="../Introducere/index.html" class="logo-container">
+            <img
+              src="../Introducere/assets/logo2.png"
+              alt="Forest Heatmap Logo"
+              class="logo-img"
+            />
+          </a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-nav">
+          <a href="../Introducere/index.html" class="nav-link">Acasă</a>
+          <a href="map.html" class="nav-link">Hartă</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-container">
+        <div class="map-wrapper">
+            <div id="map"></div>
+        </div>
+        <aside class="sidebar-panel">
+            <div class="sidebar-header">
+                <h2>
+                    <i class="fas fa-stream"></i>
+                    Live Transports Feed
+                </h2>
+                <div class="feed-count" id="feed-count">0 transports</div>
+            </div>
+            <div class="sidebar-content" id="transports-list">
+                <div class="loading-skeleton">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
+
